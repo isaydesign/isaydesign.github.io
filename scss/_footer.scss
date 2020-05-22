@@ -1,0 +1,37 @@
+footer {
+	display: block;
+	position: fixed;
+	bottom: 64px;
+	right: 64px;
+
+	width: auto;
+	height: auto;
+
+	z-index: 50;
+
+	ul.footer-nav-items {
+		li {
+			float: left;
+			&:not(:last-child) { margin-right: 24px; }
+
+			a {
+				font-size: 14px;
+				text-decoration: none;
+
+				&:hover { text-decoration: underline; }
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		right: auto;
+		left: calc(66.33vw + 64px);
+
+		ul.footer-nav-items {
+
+			li {
+				float: none;
+			}
+		}
+	}
+}

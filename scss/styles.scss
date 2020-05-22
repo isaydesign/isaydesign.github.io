@@ -1,0 +1,134 @@
+// CSS RESET
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+// END - CSS RESET
+
+// UTILS
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+// END - UTILS
+
+// VARS
+$color-yellow: #FFEC1E;
+$color-think: #FF5500;
+$color-draw: #64C8FF;
+$color-code:#B5FC00;
+// END - VARS
+
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+body, html { font-family: 'DM Mono', monospace; }
+
+a { color: black; }
+// END - TYPOGRAPHY
+
+// IMPORTS
+@import "header";
+@import "footer";
+@import "main";
+
+@import "work-detail";
+// END - IMPORTS
+
+
+.circle {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+
+	width: 32vw;
+	height: 32vw;
+
+	transform: translateX(-50%) translateY(-50%);
+
+	border-radius: 50%;
+
+	// border: 8px solid black;
+	// border-top: 8px solid red;
+
+	background-color: rgba(0,0,0,.32);
+
+	z-index: 100;
+	pointer-events: none;
+}
